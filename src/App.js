@@ -110,17 +110,8 @@ var MOVIES_DATA = {
 var moviesWeKnow = Object.keys(MOVIES_DATA);
 
 export default function App() {
-  // var [title, setTitle] = useState("");
-  // var [summary, setSummary] = useState("");
-  // var [img, setImg] = useState("");
   var [show, setShow] = useState("");
   function moviesDetails(movies) {
-    // var titles = MOVIES_DATA[movies][0].title;
-    // setTitle(titles);
-    // var summaries = MOVIES_DATA[movies][0].summary;
-    // setSummary(summaries);
-    // var images = MOVIES_DATA[movies][0].poster;
-    // setImg(images);
     var shows = MOVIES_DATA[movies].map((items) => {
       return (
         <section className="movies-list">
@@ -141,13 +132,15 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <h1 className="ctr">Premier Shows 🎬</h1>
+          <h1 style={{ textAlign: "center" }} className="ctr">
+            Premier Shows 🎬
+          </h1>
           <p style={{ textAlign: "center" }}>
             Select a Category to find the best shows.
           </p>
         </header>
 
-        <div className="btns">
+        <div style={{ textAlign: "center" }} className="btns">
           {moviesWeKnow.map((movies) => {
             return (
               <button
